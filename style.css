@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.slider{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+}
+.slider img{
+    width: 100%;
+    display: none;
+}
+img.displaySlide{
+    display: block;
+    animation: slide 1.5s ease forwards;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(100%);   
+        
+    }
+    to {
+        transform: translateX(0);       
+        
+    }
+}
+
+
+.slider button{
+    position: absolute;
+    padding: 10px;
+    border:none ;
+    background-color: none;
+    color: #123;
+    border-radius: 4px;
+    transition: all .3s ease-in-out;
+    font-size: larger;
+}
+.prev{
+    left: 3px;
+    top: 50%;
+}
+.next{
+    right: 3px;
+    top: 50%;
+}
+
+
+.prev:hover{
+    transform: translateX(2px);
+}
+.next:hover{
+    transform: translateX(-2px);
+}
